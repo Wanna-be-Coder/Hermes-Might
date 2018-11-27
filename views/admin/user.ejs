@@ -1,0 +1,61 @@
+
+<% include ../partials/header %>
+<div class="container">
+
+
+
+
+<div class="row" style="display:flex; flex-wrap: wrap;">
+
+
+</div>
+<div style="overflow-x:auto;">
+    
+    <table>
+      <tr>
+        <th>User Name</th>
+        <th>Role</th>
+        <th>Action</th>
+      </tr>
+      <% data.forEach(function(users){%>
+      <tr>
+        <td><%= users.username %></td>
+       
+        <td> <% users.role.forEach(function(roles){%><%= roles %>,<% }) %></td>
+        
+        <td>
+                <form action="/user/<%=users._id%>/promote?_method=PUT" method="POST">
+                    <select name="role">
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                    <!-- <option value="superadmin">Super Admin</option> -->
+
+                    
+                </select>
+                <button class="btn btn-warning">Promote</button>
+                    <!-- <% users.role.forEach(function(roles){  
+                        
+                        if(roles=="user"){%><input type="checkbox" checked  value="user">User <br> <%} %>
+                        <% if (roles=="admin"){%><input type="checkbox" checked  value="admin">Admin <br> <%}%>
+                        <% if (roles=="superadmin"){%><input type="checkbox" checked  value="admin">Super Admin <br> <%}%>
+                         
+                            <input type="checkbox" name="role" value="user">User <br>
+                            <input type="checkbox" name="role" value="admin">Admin <br>
+                            <input type="checkbox" name="role"value="superadmin">Super Admin <br>
+                    <%}) %>
+                    <button type="submit">Update</button> -->
+                </form>
+            <form id="delete-form" action="/users/<%=users._id%>?_method=DELETE" method="POST">
+                <button class="btn btn-danger">Delete</button>
+                
+                </form>
+            
+        </td>
+      </tr>
+      <% }) %>
+    </table>
+
+  </div>
+</div>
+
+<% include ../partials/footer %>

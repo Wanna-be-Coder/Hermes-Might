@@ -1,0 +1,41 @@
+
+<% include ../partials/header %>
+<div class="container">
+
+
+
+
+<div class="row" style="display:flex; flex-wrap: wrap;">
+
+
+</div>
+<div style="overflow-x:auto;">
+   
+    <table>
+            
+      <tr>
+        <th>CampGround Name</th>
+        <th>Image</th>
+        <th>Description</th>
+        <th>Author</th>
+        <th>Action</th>
+      </tr>
+      <% grounds.forEach(function(campground){%>
+      <tr>
+        <td><%= campground.name %></td>
+        <td><img src="<%= campground.image %>" style="width:100%; height:100px;"></td>
+        <td><%= campground.description %></td>
+        <td><%= campground.author.username %></td>
+        <td> <a class="btn btn-warning"  href="/campgrounds/<%=campground._id%>/edit">Edit</a>
+            <form id="delete-form" action="/campgrounds/<%=campground._id%>?_method=DELETE" method="POST">
+                <button class="btn btn-danger">Delete</button>
+                
+                </form></td>
+      </tr>
+      <% }) %>
+    </table>
+
+  </div>
+</div>
+
+<% include ../partials/footer %>

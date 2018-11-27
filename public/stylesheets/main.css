@@ -1,0 +1,94 @@
+body{
+  font-family: 'Gloria Hallelujah', cursive;
+  background-image: url("https://images.wallpaperscraft.com/image/los_angeles_california_evening_playground_basketball_markup_palms_48031_1920x1080.jpg"); 
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+}
+.thumbnail img{
+  width:100%;
+
+}
+/* .thumbnail {
+  padding:0;
+} */
+.thumbnail .caption-full{
+  padding: 9px;
+}
+#delete-form {
+display:inline;
+}
+#map {
+   
+ 
+    height: 500px;
+    width:500px;
+  
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+  background-color: #ffff
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){
+  color: white;
+  background-color: #268afc
+}
+
+input.un{
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+input.p{
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+input.btn.btn-success:hover{
+background-color: black;
+color: white;
+}
+
+.lin{
+  text-align: center;
+
+}
+.footer{
+  position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+.tphoto{
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  height: 150px !important;
+  width: 100%;
+
+}
+
+h3{
+  color:#4169E1;
+  font-size: 33px;
+  font-weight: bold;
+}
+.about{
+  color:blue;
+}
+select{
+  color: black;
+}

@@ -1,0 +1,47 @@
+
+<% include ../partials/header %>
+<div class="container">
+
+
+
+
+<div class="row" style="display:flex; flex-wrap: wrap;">
+
+
+</div>
+<div style="overflow-x:auto;">
+    
+    <table>
+      <tr>
+        <th>User Name</th>
+        <!-- <th>Play Ground</th> -->
+        <th>Transaction Id</th>
+        <th>Action</th>
+      </tr>
+      <% data.forEach(function(users){%>
+      <tr>
+        <td><%= users.author.username %></td>
+       
+        <!-- <td><%= users.campground.name %> </td> -->
+
+        <td><%= users.transactionid %> </td>
+        
+        <td>
+            <form id="delete-form" action="/book/<%=users._id%>?_method=DELETE" method="POST">
+                <button class="btn btn-danger">Delete</button>
+                
+                </form>
+                <% if(users.status == true){ %>
+                <a href="/books/<%=users._id%>"><button class="btn btn-danger">Cancel Booking</button> </a>
+                <% }else{ %>
+                    <a href="/books/<%=users._id%>"><button class="btn btn-success">Book</button> </a>
+                    <% } %>
+        </td>
+      </tr>
+      <% }) %>
+    </table>
+
+  </div>
+</div>
+
+<% include ../partials/footer %>

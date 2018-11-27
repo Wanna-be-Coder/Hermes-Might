@@ -1,0 +1,33 @@
+<% include ./partials/header %>
+
+
+
+
+
+<div class="container-fluid">
+        <div class="col-md-12">
+        <div class="lin">
+        <br><br><br><br><br><h1>Sign Up</h1>
+        <form action="/register" method="post">
+        <input class="un" type="text" name="username" placeholder="User Name"><br><br>
+        <input class="p" type="password" name="password" placeholder="Password"><br><br>
+        <select name="role">
+                <option value="user" >User</option>
+                <option value="admin">Admin</option>
+                <option value="superadmin">Super Admin</option>
+              </select>
+              <br><br>
+        <input type="submit" value="Login" class="btn btn-success">
+    </div>    
+    </div>
+    </div>
+
+</form>
+
+
+
+
+
+
+
+<% include ./partials/footer %>

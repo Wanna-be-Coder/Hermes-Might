@@ -1,0 +1,82 @@
+body{
+	background: url(http://www.freeimageslive.com/galleries/sports/sportsgames/pics/cricket_ball.jpg);
+	background-size: cover;
+	background-position: center;
+	font-family: 'Gloria Hallelujah', cursive;
+	height: 100%;
+	width: 100%;
+	background-attachment: fixed;
+}
+
+html{
+	height: 100%;
+}
+
+#content{
+	text-align: center;
+	padding-top: 18%;
+	min-height: 100%;
+}
+
+#main{
+	overflow: auto;
+	padding-bottom: 100%;
+}
+
+h1{
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	font-size: 50px;
+	font-weight: 700;
+}
+
+h3{
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	font-size: 30px;
+}
+
+hr{
+	width: 550px;
+}
+.btn{
+    outline:none;
+    border:none;
+    cursor:pointer;
+    display:block;
+    position:relative;
+    background-color:#268afc;
+    font-size:16px;
+    font-weight:300;
+    color:white;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    padding:25px 80px;
+    margin:0 auto;
+    border-radius:20px;
+    box-shadow:0 6px #268afc;
+  }
+  
+  .btn:hover{
+    box-shadow:0 4px #268afc;
+    top:2px;
+  }
+  .btn:active{
+    box-shadow:none;
+    top:6px;
+  }
+
+#footer{
+	opacity: 0.7;
+	font-size: 40px;
+}
+.footer{
+  position: absolute;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+
